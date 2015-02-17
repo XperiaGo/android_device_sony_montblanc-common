@@ -97,7 +97,13 @@ PRODUCT_PACKAGES += \
         avtest \
         libsbc \
         hciattach
-        
+
+# Run adbd as root
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+
+# Default USB configuration
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
+
 # Custom init scripts
 PRODUCT_COPY_FILES += \
         device/sony/montblanc-common/config/init.rc:root/init.rc \
