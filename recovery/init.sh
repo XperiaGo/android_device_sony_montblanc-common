@@ -3,8 +3,7 @@ set +x
 _PATH="$PATH"
 export PATH=/sbin
 
-busybox cd /
-busybox date >>boot.txt
+busybox date -u >>boot.txt
 exec >>boot.txt 2>&1
 busybox rm /init
 
@@ -55,7 +54,7 @@ busybox umount /proc
 busybox umount /sys
 
 busybox rm -fr /dev/*
-busybox date >>boot.txt
+busybox date -u >>boot.txt
 
 # unpack the ramdisk image
 # -u should be used to replace the static busybox with dynamically linked one.
