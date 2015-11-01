@@ -34,8 +34,6 @@ PRODUCT_COPY_FILES += \
         device/sony/montblanc-common/config/egl.cfg:system/lib/egl/egl.cfg \
         device/sony/montblanc-common/config/asound.conf:system/etc/asound.conf \
         device/sony/montblanc-common/config/hostapd.conf:system/etc/wifi/hostapd.conf \
-        device/sony/montblanc-common/config/01stesetup:system/etc/init.d/01stesetup \
-        device/sony/montblanc-common/config/10wireless:system/etc/init.d/10wireless \
         device/sony/montblanc-common/config/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
         
 # Filesystem management tools
@@ -111,7 +109,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
         device/sony/montblanc-common/config/omxloaders:system/etc/omxloaders \
         device/sony/montblanc-common/config/ril_config:system/etc/ril_config \
-        device/sony/montblanc-common/config/install_wlan.sh:system/bin/install_wlan.sh \
+        device/sony/montblanc-common/config/ste_setup.sh:system/bin/ste_setup.sh \
         device/sony/montblanc-common/config/ste_modem.sh:system/etc/ste_modem.sh \
 	device/sony/montblanc-common/config/cacert.txt:system/etc/suplcert/cacert.txt \
 	device/sony/montblanc-common/config/gps.conf:system/etc/gps.conf
