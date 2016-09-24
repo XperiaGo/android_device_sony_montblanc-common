@@ -95,6 +95,9 @@ ifeq ($(HOST_OS),linux)
 TARGET_USERIMAGES_USE_F2FS := true
 endif
 
+# ODEX ROM
+WITH_DEXPREOPT := true
+
 # TWRP Recovery
 TW_THEME := portrait_mdpi
 TARGET_NO_SEPARATE_RECOVERY := true
