@@ -7,11 +7,8 @@ persist.sys.ui.hw=true
 # Wireless
 wifi.interface=wlan0
 
-# USB
-persist.sys.usb.config=mtp
-
 # Bluetooth
-persist.sys.bluetooth.handsfree=hfp
+persist.sys.bluetooth.handsfree=hfp_wbs
 
 # RIL configuration
 rild.libargs=-c UNIX -n 2 -p /dev/socket/at_core -s /dev/socket/at_core -i rmnet
