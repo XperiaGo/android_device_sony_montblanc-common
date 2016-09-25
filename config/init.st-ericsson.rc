@@ -253,6 +253,9 @@ on boot
     # Enable debugfs for eng and userdebug variants
     class_start bootstage1
 
+    # Load kernel modules
+    insmod /system/lib/modules/bnep.ko
+    insmod /system/lib/modules/tun.ko
 
     # USB gadget initial setup
     write /sys/class/android_usb/android0/bDeviceClass 0
