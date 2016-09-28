@@ -332,9 +332,6 @@ on boot
 
     write /proc/sys/kernel/sysrq 0
 
-    # Configurate TCP/IP kernel settings
-    exec /system/bin/sh /system/etc/init.netconfig.sh
-
     # SEMC: Enable Wifi EAP SIM
     setprop ro.wifi.eap_sim_enabled true
 
