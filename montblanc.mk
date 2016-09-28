@@ -7,9 +7,6 @@ $(call inherit-product, hardware/ste-sony/common.mk)
 # Inherit from the vendor common montblanc definitions
 $(call inherit-product-if-exists, vendor/sony/montblanc-common/montblanc-common-vendor.mk)
 
-# Common montblanc headers
-TARGET_SPECIFIC_HEADER_PATH := device/sony/montblanc-common/include
-
 # Common montblanc features
 PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \

@@ -212,14 +212,6 @@ on post-fs-data
     chown system system /dev/dbx500_mloader_fw
     chmod 0600 /dev/dbx500_mloader_fw
 
-    #STE: create var/run, var/lib for avahi
-    mkdir /var
-    mkdir /var/run
-    mkdir /var/lib
-
-    #STE: Change permissions for modem_log_relay config file
-    chmod 666 /data/misc/trace_auto.conf
-
     # STE: set proper access to modem storage pipe
     chown radio radio /dev/rpc
     chmod 0600 /dev/rpc
@@ -388,9 +380,6 @@ on boot
     chown system system /sys/module/radio_cg2900/parameters/grid
     chmod 0660 /sys/module/radio_cg2900/parameters/band
     chmod 0660 /sys/module/radio_cg2900/parameters/grid
-
-    chown bluetooth bluetooth /data/misc/bluetooth
-    chown bluetooth bluetooth /dev/uhid
 
     # STE: Define support for SIM card hot swap
     setprop icc.hotswap supported
