@@ -112,13 +112,6 @@ public class SonyU8500RIL extends RIL implements CommandsInterface {
         handleUnsupportedRequest(result);
     }
 
-    @Override
-    public void
-    getHardwareConfig (Message result) {
-        Rlog.i(LOG_TAG, "RIL_REQUEST_GET_HARDWARE_CONFIG is not supported");
-        handleUnsupportedRequest(result);
-    }
-
     /**
      * {@inheritDoc}
      */
@@ -141,10 +134,5 @@ public class SonyU8500RIL extends RIL implements CommandsInterface {
     public void setCellInfoListRate(int rateInMillis, Message response) {
         Rlog.i(LOG_TAG, "RIL_REQUEST_SET_UNSOL_CELL_INFO_LIST_RATE is not supported");
         handleUnsupportedRequest(response);
-    }
-
-    public void setDataAllowed(boolean allowed, Message result) {
-        Rlog.i(LOG_TAG, "RIL_REQUEST_ALLOW_DATA is not supported");
-        handleUnsupportedRequest(result);
     }
 }
