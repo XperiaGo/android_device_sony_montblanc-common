@@ -380,12 +380,6 @@ on boot
     # STE: Enable wide-band speech for Bluetooth
     setprop bt.hfp.wideband 1
 
-    # KSM parameters
-    write /sys/kernel/mm/ksm/pages_to_scan 256
-    write /sys/kernel/mm/ksm/sleep_millisecs 1500
-    write /sys/kernel/mm/ksm/deferred_timer 1
-    write /sys/kernel/mm/ksm/run 1
-
     # Swap parameters
     write /proc/sys/vm/page-cluster 0
 
@@ -615,6 +609,13 @@ on property:init.svc.bluetoothd=running
 on property:dev.bootcomplete=1
     start setssflagbc
     start lbsd
+
+on property:sys.boot_completed=1
+    # KSM parameters
+    write /sys/kernel/mm/ksm/pages_to_scan 256
+    write /sys/kernel/mm/ksm/sleep_millisecs 1500
+    write /sys/kernel/mm/ksm/deferred_timer 1
+    write /sys/kernel/mm/ksm/run 1
     
 # CM Performance Profiles
 # Powersave
