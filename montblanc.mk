@@ -30,7 +30,6 @@ PRODUCT_COPY_FILES += \
 
 # Configuration files
 PRODUCT_COPY_FILES += \
-        device/sony/montblanc-common/config/media_codecs.xml:system/etc/media_codecs.xml \
         device/sony/montblanc-common/config/egl.cfg:system/lib/egl/egl.cfg \
         device/sony/montblanc-common/config/asound.conf:system/etc/asound.conf \
         device/sony/montblanc-common/config/hostapd.conf:system/etc/wifi/hostapd.conf \
@@ -39,6 +38,14 @@ PRODUCT_COPY_FILES += \
         device/sony/montblanc-common/config/98netflix:system/etc/init.d/98netflix \
         device/sony/montblanc-common/config/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
         
+
+# Media Codecs
+PRODUCT_COPY_FILES += \
+        device/sony/montblanc-common/config/media_codecs.xml:system/etc/media_codecs.xml \
+        device/sony/montblanc-common/config/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+        device/sony/montblanc-common/config/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
+        device/sony/montblanc-common/config/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
         make_ext4fs \
