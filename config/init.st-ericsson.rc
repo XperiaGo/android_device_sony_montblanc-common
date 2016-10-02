@@ -338,8 +338,6 @@ on boot
     chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
     chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
     
-    exec cg2900-channel_init.sh
-    
     start init_ste-cg2900
     
     start init_ste-cw1200
@@ -415,13 +413,6 @@ service init_ste-cg2900 /system/bin/hciattach -a 23 -n -s 115200 /dev/ttyAMA0 cg
     
 # Install Wireless drivers
 service init_ste-cw1200 /system/bin/install_wlan.sh
-    disabled
-    oneshot
-
-service pand /system/bin/logwrapper /system/bin/pand -s -n -M -A -E -r NAP -u /system/bin/blue-up.sh
-    class main
-    user root
-    group bluetooth net_bt_admin misc
     disabled
     oneshot
 
@@ -517,16 +508,9 @@ service atd /system/bin/at_core -mode normal -serial ttyGS0
     user root
     group radio audio system
 
-# STE, Modem Access daemon
-service mad /system/bin/ste_mad
-    class modem
-    user radio
-    group radio dbus_access misc
-
 service watchdog-kicker /system/xbin/watchdog-kicker -d /dev/watchdog -t 120
     class main
     oneshot
-
 
 # SEMC: TrimArea Daemon
 service tad /system/bin/tad /dev/block/mmcblk0 9,4,256
